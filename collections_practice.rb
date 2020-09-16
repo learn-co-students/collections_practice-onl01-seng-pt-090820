@@ -47,7 +47,7 @@ def sum_array(array)
 end
 
 def add_s(array)
-    array.collect.with_index(0) do |sing_word| 
+    array.collect do |sing_word| 
         sing_word != "feet" ? sing_word << "s" : sing_word
     end
 end
