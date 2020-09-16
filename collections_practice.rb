@@ -36,9 +36,18 @@ def find_a(array)
     array.select {|word| word.start_with?("a")}
 end
 
+# def sum_array(array)
+#     sum = 0
+#     array.each {|n| sum+=n}
+#     sum
+# end
+
 def sum_array(array)
-    sum = 0
-    array.each {|n| sum+=n}
-    sum
+    array.inject(0) {|sum, x| sum+=x}
 end
 
+def add_s(array)
+    array.collect.with_index(0) do |sing_word| 
+        sing_word != "feet" ? sing_word << "s" : sing_word
+    end
+end
