@@ -46,8 +46,14 @@ def sum_array(array)
     array.inject(0) {|sum, x| sum+=x}
 end
 
+# def add_s(array)
+#     array.collect do |sing_word| 
+#         sing_word != "feet" ? sing_word << "s" : sing_word
+#     end
+# end
+
 def add_s(array)
-    array.collect do |sing_word| 
-        sing_word != "feet" ? sing_word << "s" : sing_word
+    array.collect.with_index(0) do |sing_word, i| 
+        sing_word != array[1] ? sing_word << "s" : array[1]
     end
 end
