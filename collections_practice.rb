@@ -20,12 +20,14 @@ def reverse_array(num)
 end
 
 def kesha_maker(strings)
-  na = []
+   na = []
   strings.each do |x|
-    na << x.insert(2, "$")
+    x[2] = "$"
+    na << x
   end
   na
 end
+
 
 def find_a
   
