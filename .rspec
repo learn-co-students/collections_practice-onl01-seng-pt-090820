@@ -1,2 +1,13 @@
 --color
 --format documentation
+
+require 'pry'
+
+
+def sort_array_desc(int)
+  int = []
+  int.sort do |a, b|
+   a <=> b
+   binding.pry 
+end
+
